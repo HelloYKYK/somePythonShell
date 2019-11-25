@@ -25,8 +25,10 @@ def loop_click_for_android(run_num=150):
         # start_buttun = subprocess.Popen("adb shell input tap 500 1000")
         # if start_buttun:
         while True:
+            time.sleep(0.5)
             execmd("adb shell input tap 967 1986")
             num += 1
+            print(num)
             if num == run_num:
                 return
 
@@ -38,4 +40,4 @@ def loop_click_for_android(run_num=150):
 
 
 if __name__ == '__main__':
-    loop_click_for_android(100)
+    loop_click_for_android(200)
